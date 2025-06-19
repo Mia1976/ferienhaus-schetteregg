@@ -1,0 +1,32 @@
+# Virtuelle Umgebungen (Windows/macOS/Linux)
+venv/
+env/
+.venv/
+ENV/
+
+# Python-Dateien
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Editor-Dateien
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Log- & Laufzeitdateien
+*.log
+*.sqlite3
+*.db
+
+# Umgebungsvariablen
+.env
+.env.*
+
+# Systemdateien
+.DS_Store
+Thumbs.db
+
+# Flask Cache
+instance/

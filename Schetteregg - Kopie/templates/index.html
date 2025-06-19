@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haus Winterstaude</title>
+  <link rel="icon" href="{{ url_for('static', filename='fotos/berg_icon.jpg') }}" type="image/png">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="hero-section">
+    {% include 'navbar.html' %}
+    <h1>Willkommen im Bregenzerwald <br> Haus Winterstaude</h1>
+  </div>
+<script>
+    function toggleMenu() {
+      document.querySelector('.menu').classList.toggle('show');
+    }
+
+    function toggleDropdown(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      const dropdown = event.currentTarget.parentElement;
+      dropdown.classList.toggle('open');
+    }
+
+    // Dropdown schließen, wenn außerhalb geklickt wird (mobile)
+    document.addEventListener('click', function (e) {
+      document.querySelectorAll('.dropdown.open').forEach(function (dropdown) {
+        dropdown.classList.remove('open');
+      });
+    });
+  </script>
+
+  {% include 'footer.html' %}
+   
+</body>
+</html>
+

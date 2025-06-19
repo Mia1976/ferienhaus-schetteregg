@@ -1,0 +1,33 @@
+  <nav class="navbar">
+    <div class="menu-toggle" onclick="toggleMenu()">Start</div>
+    <ul class="menu">
+
+      <li class="dropdown">
+        <a href="#" onclick="toggleDropdown(event)">☰</a>
+
+        <div class="dropdown-content">
+          <a href="{{ url_for('index') }}">Home</a>
+
+          <a href="{{ url_for('kontakt') }}">Kontakt</a>
+          
+          <ul class="dropdown-submenu">
+            <a href="#">Gästeinformationen</a>
+            <li class="dropdown-content">
+              <a href="#">Anreise</a>
+              <a href="#">Ausflüge</a>
+              <a href="#">Bregenzerwälder Küche</a>              
+              <a href="#">Gasthäuser in der Nähe</a>
+              <a href="#">Ab-Hof-Produkte</a>
+              <a href="#">Bildergalerie</a>
+              <a href="#">Gästebuch</a>
+            </li>
+          </ul>
+         
+        </div>
+      </li>
+
+    </ul>
+  </nav>
+
+
+  
