@@ -11,11 +11,11 @@ app = Flask(__name__)
 app.secret_key = os.getenv("FLASK_SECRET_KEY", "supersecret")
 
 # Kontextprozessor für das aktuelle Jahr
+@app.context_processor
 def inject_year():
     return {'jahr': datetime.now().year}
-app.context_processor(inject_year)
 
-# Bilderverzeichnis
+# Bilderverzeichnis definieren
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 BILDER_ORDNER = os.path.join(BASE_DIR, "static", "fotos")
 
@@ -80,14 +80,14 @@ def kontakt():
                     """
                 }
 
-                response = requests.post("https://api.brevo.com/v3/smtp/email", headers=headers, json=data_user)
+                response_user = requests.post("https://api.brevo.com/v3/smtp/email", headers=headers, json=data_user)
 
-                if response.status_code == 201:
+                if response_admin.status_code == 201 and response_user.status_code == 201:
                     flash("Nachricht erfolgreich gesendet!", "success")
                 else:
-                    flash(f"Fehler beim Senden: {response.status_code} – {response.text}", "error")
+                    flash("Fehler beim Senden der E-Mail(s).", "error")
 
-                #return redirect(url_for("index"))
+                return redirect(url_for("kontakt"))
 
             except Exception as e:
                 flash(f"Fehler beim Senden der Nachricht: {e}", "error")
@@ -98,10 +98,6 @@ def kontakt():
 @app.route("/footer")
 def footer():
     return render_template("footer.html")
-
-@app.route("/anreise")
-def anreise():
-    return render_template("anreise.html")
 
 @app.route("/ausfluege")
 def ausfluege():
