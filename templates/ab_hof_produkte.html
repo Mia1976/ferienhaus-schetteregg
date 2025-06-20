@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+    {% include 'header.html' %}
+<body>
+  {% include 'navbar.html' %}
+
+<div class="kontakt-wrapper"><br><br>
+  <h2>Ab Hof Produkte</h2>
+
+  <table class="gaesteliste">
+    <tbody>
+
+        <tr>
+        <td>Vorarlberger Bergkäse</td>
+        <td>Loch (gegenüber Fuchsegg Eco Lodge)</td>
+        <td><img src="{{ url_for('static', filename='fotos/abHofKaese.jpg') }}" alt="entsorgen" class="entsorgenfoto"></td>
+      </tr>
+
+      <tr>
+        <td>Honig</td>
+        <td>Stock 188</td>
+        <td><img src="{{ url_for('static', filename='fotos/abHofHonig.jpg') }}" alt="entsorgen" class="entsorgenfoto"></td>
+      </tr>
+    
+     
+    </tbody>
+  </table>
+</div>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  {% include 'footer.html' %}   
+</body>
+</html>
+
+

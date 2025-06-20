@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="de">
+    {% include 'header.html' %}
+<body>
+  {% include 'navbar.html' %}
+
+<div class="kontakt-wrapper"><br><br>
+  <h2>Vorarlberger Kässpätzle</h2>
+  <td><img src="{{ url_for('static', filename='fotos/kaesspaetzle.jpg') }}" alt="kaesspaetzle" class="kaesspaetzlefoto"></td>
+
+  <h2>Buchtipp: </h2>
+  <td><img src="{{ url_for('static', filename='fotos/buchkueche.jpg') }}" alt="kaesspaetzle" class="kaesspaetzlefoto"></td>
+</div>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  {% include 'footer.html' %}   
+</body>
+</html>
+
+

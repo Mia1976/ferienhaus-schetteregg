@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="de">
+    {% include 'header.html' %}
+<body>
+  {% include 'navbar.html' %}
+
+  <div class="kontakt-wrapper"><br><br>
+   <h3>Egg Bregenzerwald</h3>
+  <a href="{{ url_for('static', filename='pdf/Veranstaltungskalender_KW26_2025.pdf') }}" class="pdf-button" target="_blank">
+      📄 Veranstaltungen (PDF)
+    </a><br><br>
+    <div class="karte-container">    
+    <iframe 
+        src="https://www.egg-bregenzerwald.com/sommer/urlaubsplaner/veranstaltungen/" 
+        width="100%" 
+        height="400" 
+        style="border:1px solid #ccc; border-radius: 8px;" 
+        loading="lazy">
+    </iframe>
+    </div>  
+  </div>
+  <br><br><br><br><br><br><br><br>
+  {% include 'footer.html' %}   
+</body>
+</html>
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+    {% include 'header.html' %}
+<body>
+  {% include 'navbar.html' %}
+
+<div class="kontakt-wrapper"><br><br>
+  <h2>Abfallentsorgung</h2>
+
+  <table class="gaesteliste">
+    <tbody>
+      <tr>
+        <td>Restmüll</td>
+        <td>schwarzer Sack</td>
+        <td>Hütte bei der Abbiegung in die Siedlung</td>
+        <td><img src="{{ url_for('static', filename='fotos/DSCN9303.JPG') }}" alt="entsorgen" class="entsorgenfoto"></td>
+      </tr>
+      <tr>
+        <td>Plastikmüll</td>
+        <td>gelber Sack</td>
+        <td>Hütte bei der Abbiegung in die Siedlung</td>
+        <td><img src="{{ url_for('static', filename='fotos/DSCN9303.JPG') }}" alt="entsorgen" class="entsorgenfoto"></td>
+      </tr>
+      <tr>
+        <td>Glas</td>
+        <td></td>
+        <td>in Grossdorf kurz vor der Kreuzung rechts</td>
+        <td><img src="{{ url_for('static', filename='fotos/DSCN9303.JPG') }}" alt="entsorgen" class="entsorgenfoto"></td>
+      </tr>
+      <tr>
+        <td>Flaschen der Brauerei Egg</td>
+        <td>Pfandflaschen</td>
+        <td>Abgabe beim Spar in Grossdorf oder bei der Rampe der Brauerei</td>
+        <td><img src="{{ url_for('static', filename='fotos/DSCN9303.JPG') }}" alt="entsorgen" class="entsorgenfoto"></td>
+      </tr>
+
+
+    </tbody>
+  </table>
+</div>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  {% include 'footer.html' %}   
+</body>
+</html>
+
+
