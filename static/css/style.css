@@ -43,8 +43,8 @@ h1 {
 }
 
 .hero-section {
-  background-image: url('../fotos/IMG_4129.JPG');
-  background-size: cover;
+  background-image: url('../fotos/IMG_20250620_162856_2.jpg');
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
