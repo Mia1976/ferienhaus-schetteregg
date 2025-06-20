@@ -99,45 +99,25 @@ def kontakt():
 def footer():
     return render_template("footer.html")
 
-@app.route("/ausfluege")
-def ausfluege():
-    return render_template("ausfluege.html")
+@app.route("/veranstaltungen")
+def veranstaltungen():
+    return render_template("veranstaltungen.html")
 
-@app.route("/badrheute")
-def badrheute():
-    return render_template("badrheute.html")
+@app.route("/anreise")
+def anreise():
+    return render_template("anreise.html")
 
-@app.route("/winterstaude")
-def winterstaude():
-    return render_template("winterstaude.html")
+@app.route("/verfuegbarkeit")
+def verfuegbarkeit():
+    return render_template("verfuegbarkeit.html")
 
-@app.route("/lingenau")
-def lingenau():
-    return render_template("lingenau.html")
-
-@app.route("/ab-hof-produkte")
+@app.route("/ab_hof_produkte")
 def ab_hof_produkte():
     return render_template("ab_hof_produkte.html")
-
-@app.route("/bergkaese")
-def bergkaese():
-    return render_template("bergkaese.html")
-
-@app.route("/honig")
-def honig():
-    return render_template("honig.html")
 
 @app.route("/kueche")
 def kueche():
     return render_template("kueche.html")
-
-@app.route("/kaesspaetzle")
-def kaesspaetzle():
-    return render_template("kaesspaetzle.html")
-
-@app.route("/kaesesuppe")
-def kaesesuppe():
-    return render_template("kaesesuppe.html")
 
 @app.route("/gasthaeuser")
 def gasthaeuser():
@@ -157,5 +137,4 @@ def wissenswertes():
 
 if __name__ == "__main__":
     app.run(debug=True)
-
 
