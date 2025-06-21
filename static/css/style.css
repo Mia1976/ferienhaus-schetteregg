@@ -51,6 +51,16 @@ h2 {
   margin: 0;
 }
 
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 1.2rem;
+    top: 40px;
+    right: 20px;
+    text-align: right;
+  }
+}
+
+
 /* === navigation.css === */
 .navbar {
   background-color: #333;
